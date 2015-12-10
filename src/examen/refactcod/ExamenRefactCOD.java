@@ -15,14 +15,26 @@ public class ExamenRefactCOD {
      * @param args the command line arguments
      */
     public static boolean p = false;
-
-    public static void main(String arg[]) {
-        
+    
+    public static int PedirNumero(){ 
+    
        
-        int ndig = 0;
-        if (numero <= 0) {
-            System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
-        }
+       return Integer.parseInt(JOptionPane.showInputDialog("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): "));
+        
+    }
+    public static int PedirNumeroContador(){
+    
+        return Integer.parseInt(JOptionPane.showInputDialog("Ingrese como un parametro un numero de digitos correcto mayor que 0"));
+    }
+    
+         public static void main(String arg[]) {
+        
+        int numero = Integer.parseInt(JOptionPane.showInputDialog("Introducir un numero"));
+        int ndig = PedirNumero();
+        
+        if(ndig<=0)
+        System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");        
+        
         for (int i = 1; i <= 99999; i++) {
             int aux = i;
 
